@@ -1,0 +1,291 @@
+:root {
+   --bs-white-color:white ;
+   --bs-blue-color:#0d6efd;
+  }
+  
+
+/* ----------------------- 
+        Global CSS 
+--------------------------*/
+
+*,*::after,*::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    :active,:hover,:focus{
+        outline: 0 !important;
+        outline-offset: 0;
+    }
+    
+    a,a:hover{
+        text-decoration: none;
+    }
+    a:hover{
+        color: var(--primary-color) !important;
+    }
+    ul,ol{
+        margin: 0;
+        padding: 0;
+    }
+    
+    html{
+        scroll-behavior: smooth;
+    }
+    
+/*Editing Navigation  */
+
+.nav-link{
+    color: var(--bs-white-color);
+}
+
+.nav-item{
+    padding: 0.5rem 1rem;
+}
+
+.nav-item:hover,.nav-item:active{
+    color: var(--bs-blue-color);
+}
+
+/* Masthead Styling */
+.masthead {
+  background: url("../Assets/header.jpg") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+}
+.masthead .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+.masthead-subheading {
+  font-size: 2.5rem;
+  font-weight: 300;  
+}
+
+.masthead-heading {
+  font-size: 3.5rem;
+  font-weight: 500;
+  line-height: 4.5rem;
+}
+
+/* Schedule section */
+
+#middle-section {
+    margin-top:-12vh;
+}
+
+#middle-section  .card{
+    border: none;
+}
+
+.card-img{
+    border-radius:0px ;
+}
+
+.card-title{
+    font-size: 1.25rem;
+}
+
+.fa-square{
+    font-size: .75rem;
+}
+
+
+.custom-class-0{
+    border-bottom: 1px solid rgba(255,255,255,.5); 
+    display: flex;
+    justify-content: space-between;
+    padding:.5rem 1rem;   
+
+}
+
+.custom-class-1{
+    padding:1.5rem 1rem;   
+    font-weight: 500; 
+}
+
+.custom-class-2{
+    font-size: 2rem; 
+    line-height: 2rem;
+    padding:1.5rem 1rem;   
+    font-weight: 500; 
+}
+
+.custom-class-3{
+    padding:1.5rem 1rem; 
+}
+
+.custom-child{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+}
+
+#services{
+    background-color:var(--bs-white-color);
+}
+
+.page-section{
+    padding:6rem 0;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-subheading {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.content{        
+    opacity: 0;
+    display: none;
+    position: absolute;
+    width:80%;
+    margin-top: 5rem;
+    animation: popout .7s ease .2s forwards;
+    
+}
+
+.service-class{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100%;
+    /* width:100%; */
+}
+
+
+@keyframes popout {
+    from{transform:scale(0)}
+    70%{transform:scale(1.2)}
+    to{transform:scale(1);opacity: 1;}
+}
+
+.card-img-sm{
+    width:4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#ffff;
+    margin-bottom: .5rem;
+    /* padding: 1.5rem; */
+    padding:.5rem .5rem;
+}
+
+#service-new .card-img{
+    opacity:0;
+    border-radius: 0px;
+
+}
+
+#service-new .card{
+    border: 1px solid #6c757d;
+    border-radius:0px;
+    justify-content: center;
+    align-items: center; 
+    width: 370px;
+    height: 286px;   
+    display:flex;
+    margin: 0 auto;
+}
+
+.service-class-container {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    transition: all 0.3s linear;
+}
+
+.service-class-container h6{
+    margin-top:1rem;
+    
+}
+
+#service-new .card:hover .service-class-container {
+    transition: all .3s linear;    
+}
+
+#service-new .card:hover{
+    border-color: #0d6efd ;
+}
+
+#service-new .card:hover .content{  
+    display: block;
+}
+ 
+#footer-section{
+    color: red;
+}
+
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(125% + 1.3px);
+    height: 9vh;
+    transform: rotateY(180deg);
+}
+
+#slope-section{
+    border: none;
+}
+
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #a8a8a8;
+}
+
+.custom-shape-divider-bottom .slope-fill {
+    fill: #FFFFFF;
+    
+}
+
+
+.show ul{
+    /* width: 100vw; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* position:absolute; */
+    animation: popout .7s ease forwards;
+    /* background-color: greenyellow; */
+}
+
+
+
+.nav-link{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    margin: 0 auto;
+}
+.show .nav-link{
+    color: black;
+}
